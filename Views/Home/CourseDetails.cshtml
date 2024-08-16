@@ -1,0 +1,21 @@
+﻿@model Course
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    <div class="course-course-box">
+<div class="border rounded m-4 d-flex flex-column flex-md-row">
+    <img src="~/img/courses/@Model.Image" class="col col-md-5 h-100"/>
+    <div class="col col-md-7 text-center py-4 px-1 p-md-5">
+            <h1 class="display-4 p-1 p-md-5">@Model.Title</h1>
+            <h4 class="display-7">Teacher: @Model.Teacher.FirstName @Model.Teacher.LastName</h4>
+            <p class="m-0 p-1">Level: @Model.Level</p>
+                <p class="m-0 p-1">@Model.CourseLength Hours | @Model.LessonCount Lessons</p>
+                <p class="m-0 p-1">@Model.Description</p>
+            <a class="btn btn-primary float-right text-right m-4" asp-controller="home" asp-action="index">Return to Catalog</a>
+    </div>
+</div>
+    </div>
+}

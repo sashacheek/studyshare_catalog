@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bitter", serif;
+}
+
+#study-img {
+    width:120%;
+    transform: skew(8deg);
+    position:relative;
+    right: 10%;
+}
+
+#skewed-border {
+    position: relative;
+    transform: skew(-8deg);
+    overflow: hidden;
+    width: 100%;
+    left: 15%;
+}
+
+.home-course {
+    overflow: hidden;
+}
+
+.home-course img {
+    min-width: 100%;
+    
+}
+
+.home-course-box {
+    color: black;
+    text-decoration: none;
+}
+
+.course-course-box {
+    height: 90vh;
+}
+
+/*.course-course-box img {
+    height: 50%;
+}*/
+
+.nav-link:hover {
+    background-color: lightcyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media screen and (max-width: 992px) {
+    #study-img {
+        position: relative;
+        transform: none;
+        width: 100%;
+        right: 0;
+    }
+
+    #skewed-border {
+        position: relative;
+        transform: none;
+        overflow: hidden;
+        width: 110%;
+        left: 0;
+    }
+}

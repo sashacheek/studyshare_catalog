@@ -1,0 +1,52 @@
+﻿@model List<Course>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row border-bottom">
+    <div class="col-lg-7 d-flex justify-content-center">
+        <div class="align-self-center p-5">
+            <h2 class="display-6">Learn with</h2>
+            <h1 class="display-1">StudyShare</h1>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div id="skewed-border">
+            <img src="~/img/study.jpg" id="study-img" />
+        </div>
+    </div>
+</div>
+<div class="row text-center m-2 m-sm-5">
+    <form class="mx-2 mx-sm-5 mb-3 text-start" method="get" asp-action="FilterLevel">
+        <select id="filter" name="filter">
+            <option value="all" >All</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Apply</button>
+        <span class="p-2"> Filter: @ViewBag.Filter</span>
+    </form>
+@*     @{
+        for  (int i = 0; i < 12; i++)
+        {
+            <div class="col-lg-4 col-sm-6 col-12 p-5">
+                <div class="border rounded">
+                    <h3 class="p-3 display">Programming With Java: a workaround</h3>
+                    <img src="~/img/study.jpg" class="img-fluid"/>
+                </div>
+            </div>
+        }
+    } *@
+    @{
+        foreach (Course c in @Model)
+        {
+            <a asp-action="CourseDetails" asp-controller="Home" asp-route-id="@c.CourseId" class="col-lg-4 col-sm-6 col-12 my-3 d-flex home-course-box">
+                <div class="border rounded home-course align-self-stretch flex-fill d-flex flex-column">
+                    <h3 class="p-3 display">@c.Title</h3>
+                    <img src="~/img/courses/@c.Image" class="img-fluid" />
+                </div>
+            </a>
+        }
+    }
+</div>
